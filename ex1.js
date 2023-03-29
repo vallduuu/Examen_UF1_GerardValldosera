@@ -76,7 +76,7 @@ app.post('/api/ex1', (req, res) => {
 // Ex3 BOOOOo
 app.post("/api/ex3", (req, res) => {
     const ex3 = "C:\\Users\\Valldu\\Desktop\\programacions\\FitxersAngular\\UF1_ExamenAaD\\Imatges\\Imatge1.jpg";
-    const readableStream = fs.createReadStream(ex3, { highWaterMark: 16384 });
+    const readableStream = fs.createReadStream(ex3, { highWaterMark: 8192 });
     console.log(`${path.basename(ex3)}`);
     readableStream.on('data', (chunk) => {
             console.log(chunk);
